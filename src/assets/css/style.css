@@ -1,0 +1,121 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--background);
+  transition: .5s;
+}
+[data-theme="dark"]{
+  --text: #eeeeee;
+  --background: #222222;
+  --background2: #000000;
+  --background3: #151515;
+  --highlight1: #353535;
+  --highlight2: #303030;
+}
+[data-theme="light"]{
+  --text: #222222;
+  --background: #eeeeee;
+  --background2: #ffffff;
+  --background3: #e5e5e5;
+  --highlight1: #efefef;
+  --highlight2: #dddddd;
+}
+
+h1{
+  text-transform: uppercase;
+  color: rgba(212,26,117,1);
+}
+.calc-con{
+  width: 100%;
+  align-items: center;
+}
+.calc{
+  margin: auto;
+  width: 20%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px #5555;
+  background-color: var(--background);
+}
+@media screen and (max-width:768px) {
+  .calc{
+    width: 40%;
+  }
+}
+.display{
+  width: 100%;
+}
+.display input{
+  width: 100%;
+  border: 0px;
+  padding: 10px;
+  outline: 0px !important;
+  color: var(--background);
+}
+.in-res{
+  font-size: 64px;
+  height: 90px;
+}
+.in-exp{
+  border-radius: 10px 10px 0px 0px;
+  font-size: 24px;
+  height: 30px;
+  text-align: right;
+}
+.buttons-con{
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+}
+.btn{
+  outline: 0px;
+  border: 0px;
+  width: 25%;
+  height: 80px;
+  color: var(--text);
+  font-size: 18px;
+  transition: .5s;
+}
+.btn:hover{
+  background-color: var(--highlight1);
+}
+.btn:active{
+  background-color: var(--highlight2);
+
+}
+.btn-calc-op{
+  background-color: var(--background3);
+}
+.btn-calc-num{
+  background-color: var(--background2);
+}
+.bg-gradient{
+  background: linear-gradient(90deg, rgba(242,147,113,1) 0%, rgba(255,0,151,1) 100%);
+  color: var(--background);
+}
+.plus{
+  position: absolute;
+  height: 160px;
+  width: 5%;
+  border-radius: 0px 0px 10px 0px;
+}
+@media screen and (max-width:768px) {
+  .plus{
+    width: 10%;
+  }
+}
+.switch-theme{
+  z-index: 2;
+  position: absolute;
+  right: 44.9%;
+  top: 2.1%;
+}
+.switch-theme button{
+  border-radius: 50%;
+  height: inherit;
+  width: inherit;
+  color: rgba(212,26,117,1);
+  background-color: #fff0 !important;
+}
