@@ -18,12 +18,21 @@ class Home extends Component {
     this.setState({ [evt.target.name]: evt.target.value });
   }
   myfunc(){
-    var ans=eval(this.state.res);
-    this.setState({
-      exp:this.state.res,
-      res:ans
-    })
-  }
+    try{
+      var ans=eval(this.state.res);
+      this.setState({
+        exp:this.state.res,
+        res:ans
+      })
+    }
+    catch(e){
+      // alert(e);
+      this.setState({
+        exp:e.message
+      })
+      // setInterval(function (){} , 2000);
+      // this.allClear();  
+    }}
   disp(x){
     var exp=this.state.res+x;
     this.setState({
