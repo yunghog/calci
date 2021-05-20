@@ -12,7 +12,7 @@ class Home extends Component {
   render() {
     return (
       <div style={{textAlign:'center'}}>
-        MY react learning so far
+        hello world
       </div>
     );
   }
