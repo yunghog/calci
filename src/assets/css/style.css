@@ -4,6 +4,7 @@
 body{
   background-color: var(--background);
   transition: .5s;
+  font-family: sans-serif;
 }
 [data-theme="dark"]{
   --text: #eeeeee;
@@ -21,14 +22,49 @@ body{
   --highlight1: #efefef;
   --highlight2: #dddddd;
 }
-
+a{
+  text-decoration: none;
+  color: inherit;
+}
 h1{
   text-transform: uppercase;
   color: rgba(212,26,117,1);
 }
+/* navigation */
+.nav-con{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--text);
+}
+.nav{
+  background-color: var(--background2);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px #5553;
+}
+.nav ul{
+ padding: 0px;
+}
+.nav li{
+  margin: 10px;
+  display: inline;
+  font-size: 18px;
+}
+.nav li.active{
+  font-weight: bolder;
+  border-bottom: 2px solid #e35;
+  color: #e35;
+}
+
+/* calculator */
 .calc-con{
   width: 100%;
   align-items: center;
+}
+.calc-con h1{
+  position: relative;
 }
 .calc{
   margin: auto;
@@ -106,16 +142,70 @@ h1{
     width: 10%;
   }
 }
-.switch-theme{
-  z-index: 2;
-  position: absolute;
-  right: 44.9%;
-  top: 2.1%;
-}
-.switch-theme button{
+.btn-switch-theme{
   border-radius: 50%;
   height: inherit;
   width: inherit;
   color: rgba(212,26,117,1);
   background-color: #fff0 !important;
+}
+
+/* hoc concept */
+.hoc-con{
+  width: 100%;
+  text-align: center;
+}
+.hoc-con h3{
+  color: var(--text);
+}
+.hoc{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.counter-con{
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+}
+.counter{
+  background-color: var(--background2);
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px #5553;
+  overflow: hidden;
+}
+.count{
+  color: var(--background);
+  background-color: var(--text);
+  font-size: 48px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  position: relative;
+}
+.btn1{
+  background-color: #e225;
+}
+.btn2{
+  background-color: #2e25;
+}
+.btn1:hover{
+  background-color: #e22;
+}
+.btn2:hover{
+  background-color: #2e2;
+}
+.count .btn{
+  position: absolute;
+  width: 25px;
+  height: inherit;
+  color: inherit;
+}
+.count .btn1{
+  left: 0px;
+}
+.count .btn2{
+  right: 0px;
 }

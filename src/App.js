@@ -1,11 +1,19 @@
-import logo from './logo.svg';
-import Home from './pages/home';
-import './App.css';
-
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import NavBar from './components/navbar'
+import Home from './pages/home'
+import Calci from './pages/calci'
+import Hocmain from  './pages/hocdemo/hocmain'
 function App() {
   return (
-    <div className="App">
-      <Home/>
+    <div>
+    <NavBar/>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/calci" component={Calci}/>
+        <Route exact path="/hoc" component={Hocmain}/>
+      </Switch>
+    </Router>
     </div>
   );
 }
