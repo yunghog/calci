@@ -7,7 +7,7 @@ class NavBar extends Component {
     }
   }
   switchTheme=()=>{
-    if(document.body.getAttribute("data-theme")=="light"){
+    if(document.body.getAttribute("data-theme")==="light"){
       document.body.setAttribute("data-theme","dark");
     }
     else{
@@ -28,9 +28,10 @@ class NavBar extends Component {
               <li id="nav_hoc">
                 <a href="/hoc">HOC</a>
               </li>
-              <li>
-                <button className="btn btn-switch-theme" onClick={this.switchTheme}>&#9775;</button>
+              <li id="nav_employee">
+                <a href="/employee">Employees</a>
               </li>
+
           </div>
         </div>
       </div>
