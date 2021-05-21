@@ -106,6 +106,9 @@ h1{
   overflow: hidden;
 }
 .btn{
+  border: none;
+}
+.calc .btn{
   outline: 0px;
   border: 0px;
   width: 25%;
@@ -131,7 +134,7 @@ h1{
   background: linear-gradient(90deg, rgba(242,147,113,1) 0%, rgba(255,0,151,1) 100%);
   color: var(--background);
 }
-.plus{
+.calc .plus{
   position: absolute;
   height: 160px;
   width: 5%;
@@ -208,4 +211,171 @@ h1{
 }
 .count .btn2{
   right: 0px;
+}
+
+/* employee page */
+.container{
+  margin: 0px 5% 0px 5%;
+}
+.row{
+  display: flex;
+  width: 100%;
+}
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  margin: 10px;
+  display: block;
+  padding: 10px;
+}
+.col .col-12{
+  width: 100%;
+  }
+.col-1{
+  width: 8.33%;
+}
+.col-2{
+  width: 16.66%;
+}
+.col-3{
+  width: 25%;
+}
+.col-4{
+  width: 33.33%;
+}
+.col-5{
+  width: 41.66%;
+}
+.col-6{
+  width: 50%;
+}
+.col-7{
+  width: 58.33%;
+}
+.col-8{
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10{
+  width: 83.33%;
+}
+.col-11{
+  width: 91.66%;
+}
+@media screen and (max-width:768px) {
+  .row{
+    display: block;
+  }
+  .col ,.col-1, .col-2 ,.col-3 ,.col-4 ,.col-5 ,.col-6 ,.col-7, .col-8 ,.col-9 ,.col-10 ,.col-11 ,.col-12 {
+    width: 100% !important;
+    margin: 0px;
+  }
+  .container{
+    margin: 0px;
+    padding: 0px;
+  }
+}
+.box{
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 10px  10px 20px #5553;
+}
+.employee-con .list{
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+.employee-con .list li{
+  list-style-type: none;
+  margin: 10px 0px;
+  font-size: 20px;
+  border-bottom: 1px solid #5553;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.employee-con .display p{
+  margin: 5px 0px;
+  /* color: #444; */
+  font-size: 14px;
+}
+.employee-con .display p.desig{
+  margin: 0px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff8;
+  font-size: 14px;
+  font-weight: bold;
+  /* color: #2228; */
+}
+.employee-con .display h3{
+  margin: 0px;
+  text-transform: capitalize;
+}
+.employee-con .form label{
+  margin-left: 10px;
+  display: block;
+  font-size: 12px;
+}
+.employee-con .form input{
+  outline: none;
+  padding: 10px;
+  border: 1px solid #5552;
+  border-bottom: 3px solid #5552;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+.employee-con .form input:focus{
+  border: 1px solid #2255ff;
+  border-bottom: 3px solid #2255ff;
+}
+.employee-con .form .btn-grp{
+  width: 100%;
+  text-align: center;
+}
+.employee-con .form .btn{
+  height: inherit;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0px 10px;
+}
+.form .btn{
+  border-radius: 10px;
+}
+.form .btn-1{
+  background-color: #2255ff80;
+  color: #fff;
+  border: 2px solid #2255ff80;
+}
+.form .btn-1:active{
+  background-color: #2255ffff;
+  box-shadow: 0 0 10px #2255ff;
+}
+.form .btn-1:hover{
+  box-shadow: 0 0 10px #2255ff8f;
+}
+.form .btn-2{
+  color: #ff5522;
+  background-color: #fff;
+  border: 2px solid #ff552280;
+}
+.form .btn-2:active{
+  background-color: #ff5522ff;
+  box-shadow: 0 0 10px #ff5522;
+}
+.form .btn-2:hover{
+  box-shadow: 0 0 10px #ff55228f;
+}
+.list .btn-delete{
+  border: 0px;
+  position: absolute;
+  right: 20px;
+  color: #e22;
+  background-color: #fff0;
+  cursor: pointer;
 }
